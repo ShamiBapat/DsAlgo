@@ -5,6 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -48,6 +49,10 @@ public class DriverFactory {
 		else if(browser.equals("safari"))
 		{
 			tlDriver.set(new SafariDriver());  
+		}
+		else if(browser.equals("edge"))
+		{
+			tlDriver.set(new EdgeDriver());
 		}
 		else {
 			System.out.println("Please pass the correct browser value " + browser);
